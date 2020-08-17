@@ -3,6 +3,8 @@ import "./App.css";
 import Footer from "./components/Footer";
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   const [todos, setTodo] = useState([]);
@@ -48,21 +50,24 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <div className='container'>
-        <div className='todo-header'>
-          <h1>ToDo List</h1>
+    <Router>
+      <div className='App'>
+        {/* <Navbar /> */}
+        <div className='container'>
+          <div className='todo-header'>
+            <h1>ToDo List</h1>
+          </div>
+          <AddTodo addTodo={addTodo} />
+          <TodoList
+            todos={todos}
+            remTodo={remTodo}
+            editTodo={editTodo}
+            swapTodo={swapTodo}
+          />
         </div>
-        <AddTodo addTodo={addTodo} />
-        <TodoList
-          todos={todos}
-          remTodo={remTodo}
-          editTodo={editTodo}
-          swapTodo={swapTodo}
-        />
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

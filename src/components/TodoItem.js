@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const TodoItem = ({ index, todo, remTodo, editTodo, swapTodo }) => {
   const [crossed, setCrossed] = useState(false);
+
   const markComplete = (e) => {
     setCrossed(!crossed);
   };
@@ -15,7 +16,7 @@ const TodoItem = ({ index, todo, remTodo, editTodo, swapTodo }) => {
   };
 
   return (
-    <div className='todo-item card'>
+    <div className={`todo-item card`}>
       <span className={crossed ? "crossed" : null}>
         <input type='checkbox' onChange={markComplete} />
         <input type='text' value={todo} onChange={handleTodoEdit} />
