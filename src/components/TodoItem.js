@@ -17,9 +17,11 @@ const TodoItem = ({ index, todo, remTodo, editTodo, swapTodo }) => {
 
   return (
     <div className={`todo-item card`}>
-      <span className={crossed ? "crossed" : null}>
-        <input type='checkbox' onChange={markComplete} />
-        <input type='text' value={todo} onChange={handleTodoEdit} />
+      <span>
+        <span className={crossed ? "crossed" : null}>
+          <input type='checkbox' onChange={markComplete} />
+          <input type='text' value={todo} onChange={handleTodoEdit} />
+        </span>
         <div className='move'>
           <button
             onClick={() => {
