@@ -185,7 +185,7 @@ body {
   color: #555;
   border: none;
   font-size: 2rem;
-  padding-right: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
   font-weight: 800;
   border-radius: 5%;
   cursor: pointer;
@@ -229,4 +229,20 @@ body {
   .container {
     width: 80%;
   }
+}
+
+/* React Transition Animation*/
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }

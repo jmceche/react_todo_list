@@ -3,7 +3,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import AddTodo from "./components/AddTodo";
 import TodoList from "./components/TodoList";
-import Navbar from "./components/Navbar";
+
 import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
@@ -52,7 +52,6 @@ function App() {
   return (
     <Router>
       <div className='App'>
-        {/* <Navbar /> */}
         <div className='container'>
           <div className='todo-header'>
             <h1>ToDo List</h1>
