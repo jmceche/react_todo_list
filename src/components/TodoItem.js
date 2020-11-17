@@ -20,7 +20,7 @@ const TodoItem = ({ index, todo, remTodo, editTodo, swapTodo }) => {
       <span>
         <span className={crossed ? "crossed" : null}>
           <input type='checkbox' onChange={markComplete} />
-          <input type='text' value={todo} onChange={handleTodoEdit} />
+          <input type='text' value={todo.value} onChange={handleTodoEdit} />
         </span>
         <div className='move'>
           <button

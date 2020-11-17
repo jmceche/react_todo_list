@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { nanoid } from "nanoid";
 
 const AddTodo = ({ addTodo }) => {
   const [text, setText] = useState("");
@@ -9,7 +10,7 @@ const AddTodo = ({ addTodo }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    addTodo(text);
+    addTodo({ value: text, id: nanoid() });
     setText("");
   };
 

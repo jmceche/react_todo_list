@@ -7,10 +7,10 @@ const TodoList = ({ todos, remTodo, editTodo, swapTodo }) => {
     <div className='todo-list'>
       <TransitionGroup>
         {todos.map((todo, index) => (
-          <CSSTransition key={index} timeout={500} classNames='item'>
+          <CSSTransition key={todo.id} timeout={500} classNames='item'>
             <TodoItem
               editTodo={editTodo}
-              key={index}
+              key={todo.id}
               index={index}
               todo={todo}
               remTodo={remTodo}
